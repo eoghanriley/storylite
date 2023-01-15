@@ -1,13 +1,14 @@
-<script>
+<script lang="ts">
   import { onMount } from "svelte";
+  import type { Story } from "../env";
 
   let button = true;
-  let story = {
-    title: undefined,
+  let story: Story = {
+    title: "",
     component: undefined,
     props: {},
   };
-  let data;
+  let props: {};
 
   const onClick = async () => {
     if (button) {
@@ -23,9 +24,9 @@
   });
 
   // NOTE needs to be broken out into new variable for spreading props to work
-  $: data = story.props;
+  $: props = story.props;
 </script>
 
 <button on:click={onClick}>switch components</button>
 
-<svelte:component this={story.component} {...data} />
+<svelte:component this={story.component} {...props} />
