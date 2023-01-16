@@ -12,7 +12,7 @@
 
   const onClick = async () => {
     if (button) {
-      story = (await import("./test.story")).default;
+      story = (await import("../components/test.story")).default;
     } else {
       story = (await import("./Button.story")).default;
     }
@@ -21,6 +21,7 @@
 
   onMount(async () => {
     onClick();
+    console.log("e");
   });
 
   // NOTE needs to be broken out into new variable for spreading props to work
