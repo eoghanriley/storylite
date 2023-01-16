@@ -3,8 +3,25 @@ import Layout from "../layouts/Layout.astro";
 import ComponentPicker from "../components/componentPicker.svelte";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<ComponentPicker client:load />
+<Layout title="Storylite">
+	<main class="h-screen w-screen bg-zinc-800">
+		<div class="bg-red-500 left-0 top-0 w-3/12 h-full">
+			<p>File System</p>
+		</div>
+		<div class="w-9/12 flex h-full absolute top-0 right-0">
+			<div
+				class="bg-green-500 grow right-0 absolute top-0 w-full"
+				style="height: 70%;"
+			>
+				<p>Component View</p>
+			</div>
+			<div
+				class="bg-blue-500 absolute flex-none right-0 bottom-0 w-full"
+				style="height: 30%;"
+			>
+				<!-- <ComponentPicker client:load /> -->
+				<p>Control Panel</p>
+			</div>
+		</div>
 	</main>
 </Layout>
