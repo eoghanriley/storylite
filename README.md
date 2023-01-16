@@ -1,1 +1,1 @@
-A new opinioated way to write your stories.
+A new opinionated way to write your stories.
